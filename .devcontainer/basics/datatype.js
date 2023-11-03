@@ -16,3 +16,21 @@ let state;
 //object
 console.log(typeof null);//object
 console.log(typeof undefined);//undefined
+
+//Memory
+//Stack(primitive),Heap(Non-primitive)
+let myYoutubeName="androcoding"
+let anotherName="myYoutubeName"
+console.log(anotherName);
+console.log(myYoutubeName);
+let userOne={
+    email:"nishusgmail.com",
+    upi:"user@ybl"
+}
+let userTwo=userOne
+userTwo.email="nishu@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
