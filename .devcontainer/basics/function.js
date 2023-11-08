@@ -49,3 +49,55 @@ function returnSecondValue(getArray){
     return getArray[1]
 }
 console.log(returnSecondValue([200,400,500,1000]));
+
+
+//arrow fuc
+const users={
+    username:"nishu",
+    price:999,
+    
+    welcomeMessage:function(){
+        consolelog(`${this.username}, welcome to web`);
+        console.log(this);
+    }
+}
+// user.welcomeMessage()
+// user.username="sam"
+// user.welcomeMessage()
+
+console.log(this);
+
+
+
+// function chai(){
+//     let username="nishu"
+//     console.log(this.username);
+// }
+
+const chai =() =>{
+    let username="nishu"
+    console.log(this);
+}
+// chai()
+
+// const addTwo=(num1,num2)=>{
+//     return num1+num2
+// }
+const addTwo=(num1,num2)=>({username:"nishu"})
+// const addTwo=(num1,num2)=>num1+num2
+// const addTwo=(num1,num2)=>(num1+num2)
+console.log(addTwo(3,4))
+
+//Invoked Function
+//IIFE
+// Immediately Invoked Function Expressions (IIFE)
+
+
+(function chai(){
+    // named IIFE
+    console.log(`DB CONNECTED`);
+})();
+
+( (name) => {
+    console.log(`DB CONNECTED TWO ${name}`);
+} )('hitesh')
