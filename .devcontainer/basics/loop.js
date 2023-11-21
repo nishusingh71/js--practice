@@ -148,6 +148,64 @@ const myCooding=[
 
 ]
 
-myCooding.forEach((item)=>{
-    console.log(item.langName);
+// myCooding.forEach((item)=>{
+//     console.log(item.langName);
+// })
+
+// const values=myCooding.forEach((item)=>{
+//     console.log(item.langName);
+//     return item;
+// })
+// console.log(values);
+
+const myNums=[1,2,3,4,5,6,7,8,9,10]
+// const newNums=myNums.filter((num)=>num>4)
+// console.log(newNums);
+// const newNums=myNums.filter((num)=>{ return num>4})
+// console.log(newNums);
+
+const newNums=[]
+myNums.forEach((num)=>{
+    if(num>4){
+        newNums.push(num);
+    }
 })
+console.log(newNums);
+
+myNums.map(()=>num+10)
+
+//chaining
+
+const n=myNums.map((num)=>num*10).map((num)=>num+1).filter((num)=>num>=40)
+
+//Reduce Js 
+const mn=[1,2,3]
+const m=mn.reduce(function(acc,currval){
+    return acc+currval
+},0)
+console.log(m);
+
+const shoppingcart=[
+    {
+        itemName:"mobile dev",
+        price:3999
+    },
+    {
+        itemName:"mobile dev",
+        price:3999
+    },
+    {
+        itemName:"mobile dev",
+        price:3999
+    },
+    {
+        itemName:"mobile dev",
+        price:3999
+    },
+    {
+        itemName:"mobile dev",
+        price:3999
+    },
+]
+const p=shoppingcart.reduce((acc,item)=>acc+item.price,0)
+console.log(p);
